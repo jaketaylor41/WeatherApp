@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head></h:head> 
+ <h:outputStylesheet library="css" name="style.css"/>
+
+<h:body> 
+	<!-- Set the Layout and Title for the page -->
+	<ui:composition template="/layouts/commonLayout.xhtml">
+	<ui:define name="title">JSF Response Page</ui:define>
+	<ui:define name="content">
+		<div align="center">
+			<h:dataTable 
+				 value="#{weatherList}"
+				 var="weather" styleClass="order-table"
+				 headerClass="order-table-header" 
+				 rowClasses="order-table-odd-row,order-table-even-row"
+				 border = "3">
+			<h:column>
+				<f:facet name="header">Date</f:facet>
+				#{weather.date}
+			</h:column>
+			<h:column>
+				<f:facet name="header">Temp</f:facet>
+				#{weather.temp}
+			</h:column>
+			<h:column>
+				<f:facet name="header">Humidity</f:facet>
+				#{weather.humidity}
+			</h:column>
+			<h:column>
+				<f:facet name="header">Wind Speed</f:facet>
+				#{weather.windSpeed}
+			</h:column>
+			<h:column>
+				<f:facet name="header">City</f:facet>
+				#{weather.city}
+			</h:column>
+			<h:column>
+				<f:facet name="header">State</f:facet>
+				#{weather.state}
+			</h:column>
+			
+			</h:dataTable>
+			
+		</div>
+		
+	</ui:define>
+	</ui:composition>
+</h:body> 
+</html>
