@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<ui:composition template="/layouts/commonLayoutIndex.xhtml">
+	<ui:define name="title">Weather App</ui:define>
+	<ui:define name="content">
+		<div align="center">
+			<!-- Index page which will welcome the user and let them register or login -->
+			<h:form>
+				<br></br>
+				<h3>Select City:</h3>
+				<select name="city">
+				<option>Phoenix</option>
+				</select>
+				<br></br>
+				<h3>Select State:</h3>
+				<select name="state">
+				<option>Arizona</option>
+				</select>
+				
+				<input type="submit" value="Submit"></input>
+			</h:form>
+		</div>
+	</ui:define>
+</ui:composition>
+<h:head>
+	<title>Weather App</title>
+</h:head>
+</html>

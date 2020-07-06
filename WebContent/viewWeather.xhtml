@@ -5,14 +5,47 @@
       xmlns:h="http://java.sun.com/jsf/html"> 
 
 <h:head></h:head> 
- <h:outputStylesheet library="css" name="style.css"/>
 
 <h:body> 
 	<!-- Set the Layout and Title for the page -->
 	<ui:composition template="/layouts/commonLayout.xhtml">
 	<ui:define name="title">JSF Response Page</ui:define>
 	<ui:define name="content">
-		<div align="center">
+ 	<h:outputStylesheet library="css" name="style.css"/>
+ 	
+ 	
+ 	<div class="divContainer">
+ 	
+	 	<div class="location">
+	 	
+	 	<h3>#{weather.city}, #{weather.state}</h3>
+	 	<h6>#{weather.date}</h6>
+	 	<br></br>
+	 	<h4>#{weather.temp}</h4>
+	 	
+	 	</div>
+	 	
+	 	
+	 	<div class="humidity">
+	 	
+	 	<h3>Humidity</h3>
+	 	<h4>#{weather.humidity}</h4>
+	 	
+	 	</div>
+	 	
+	 	
+	 	<div class="windSpeed">
+	 	
+	 	<h3>Wind Speed</h3>
+	 	<h4>#{weather.windSpeed}</h4>
+	 	
+	 	</div>
+
+ 	</div>
+ 	
+ 	
+ 	
+		<div class="tableDiv" align="center">
 			<h:dataTable 
 				 value="#{weatherList}"
 				 var="weather" styleClass="order-table"

@@ -10,6 +10,8 @@ import business.UserBusinessInterface;
 import models.Credentials;
 import models.User;
 import models.Weather;
+import interceptor.Interceptor;
+import javax.interceptor.Interceptors;
 
 /**
  * This is the controller class for the User where it handles the front end page
@@ -22,6 +24,7 @@ import models.Weather;
  */
 @ManagedBean
 @ViewScoped
+@Interceptors(Interceptor.class)
 public class UserController {
 
 	// inject beans

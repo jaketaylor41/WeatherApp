@@ -13,6 +13,8 @@ import javax.inject.Inject;
 import models.Weather;
 import dao.WeatherAccessInterface;
 import dao.WeatherDataAccessService;
+import interceptor.Interceptor;
+import javax.interceptor.Interceptors;
 
 
 /*
@@ -23,6 +25,7 @@ import dao.WeatherDataAccessService;
 
 @ManagedBean
 @ViewScoped
+@Interceptors(Interceptor.class)
 public class FormController {
 	@Inject
 	WeatherAccessInterface<Weather> dataAccessWeather;

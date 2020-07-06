@@ -4,9 +4,12 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import interceptor.Interceptor;
+import javax.interceptor.Interceptors;
 
 @ManagedBean
 @ViewScoped
+@Interceptors(Interceptor.class)
 public class User {
 
 	// initialize properties used for the user class
